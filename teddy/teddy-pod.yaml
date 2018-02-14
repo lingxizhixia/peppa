@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: teddy
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: teddy
+    spec:
+      containers:
+      - name: teddy
+        image: lingxizhixia/teddy:1.0
+        ports:
+        - containerPort: 8010
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8010
+          initialDelaySeconds: 30
+          timeoutSeconds: 1
