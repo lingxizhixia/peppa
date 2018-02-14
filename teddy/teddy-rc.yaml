@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: teddy3
+  name: teddy4
 spec:
   replicas: 3
   template:
     metadata:
       labels:
-        app: teddy3
+        app: teddy4
     spec:
       containers:
-      - name: teddy3
+      - name: teddy4
         image: lingxizhixia/teddy:1.0
         ports:
         - containerPort: 8010
