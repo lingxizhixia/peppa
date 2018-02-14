@@ -11,5 +11,5 @@ spec:
   ports:
   - protocol: TCP
     port: 8010
-    nodePort: 8010
+    nodePort: 38010
     name: http
